@@ -18,4 +18,4 @@ Each time you delete a site in a WordPress Multisite installation, its tables an
 ### How does it work ?
 MU-Checker loads the WordPress framework and use it to access your database. It finds the actual existing websites ids and compares them with what folders are in your blogs.dir directory and then compares with the table existing in your database. That's all !
 ### How safe is it ?
-MU-Checker does only show you what table and folders could be deleted. It doesn't do any other operation else. I recommand you to delete mu-checker.php when you're done with it just to avoid confusion in your system.
+MU-Checker does only show you what table and folders could be deleted. It doesn't do any other operation else as you have to delete ghost elements manually.
