@@ -8,6 +8,8 @@ Each time you delete a site in a WordPress Multisite installation, its tables an
 3. backups may spend less time to perform, depending on the size of all deleted ghost elements
 
 ## Usage
+**Before you start** : make sure you have a fresh backup of both files and database in case you delete something wrong.
+
 1. upload the [mu-checker.php](mu-checker.php) at the root of your website
 2. visit /mu-checker.php with your browser
 3. a list of ghost folders found in wp-content/blogs.dir and a list of ghost tables found in your database are displayed
