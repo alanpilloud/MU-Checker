@@ -42,6 +42,22 @@ foreach($blogsdir_ids as $k => $id) {
 }
 
 /*
+* Get the blogs directories in wp-content/uploads/sites/
+*/
+echo '<h3>Checking for ghost blogs.dir folder</h3>';
+$blogsdir_ids = scandir(WP_CONTENT_DIR.'/uploads/sites');
+foreach($blogsdir_ids as $k => $id) {
+  if($id == '.' || $id == '..') {
+    continue;
+  }
+  if(!in_array($id,$existing_blogs_list)) {
+    echo '<div style="'.$css['error'].'">Folder uploads/sites/'.$id.' has no blog</div>';
+  } else {
+    echo '<div style="'.$css['success'].'">Folder uploads/sites/'.$id.' has a blog</div>';
+  }
+}
+
+/*
 * Get the blogs db tables
 */
 echo '<h3>Checking for ghost database tables</h3>';
