@@ -44,7 +44,7 @@ foreach($blogsdir_ids as $k => $id) {
 /*
 * Get the blogs directories in wp-content/uploads/sites/
 */
-echo '<h3>Checking for ghost blogs.dir folder</h3>';
+echo '<h3>Checking for ghost uploads/sites folder</h3>';
 $blogsdir_ids = scandir(WP_CONTENT_DIR.'/uploads/sites');
 foreach($blogsdir_ids as $k => $id) {
   if($id == '.' || $id == '..') {
